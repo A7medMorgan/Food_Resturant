@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13D7D5FA-BF84-4479-B72C-19BDE59ABCD7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Resturant</RootNamespace>
+    <AssemblyName>Resturant</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="Admin_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_form.Designer.cs">
+      <DependentUpon>Admin_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_file.cs" />
+    <Compile Include="Customer_order.cs" />
+    <Compile Include="DelevaryBoy_file.cs" />
+    <Compile Include="DeliveryBoy_admin_form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeliveryBoy_admin_form.Designer.cs">
+      <DependentUpon>DeliveryBoy_admin_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="File_Food.cs" />
+    <Compile Include="Food_admin_form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Food_admin_form.Designer.cs">
+      <DependentUpon>Food_admin_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_admin.Designer.cs">
+      <DependentUpon>Login_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_form.Designer.cs">
+      <DependentUpon>Main_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="order.cs" />
+    <Compile Include="Order_DeliveryBoy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_DeliveryBoy.Designer.cs">
+      <DependentUpon>Order_DeliveryBoy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="user_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_form.Designer.cs">
+      <DependentUpon>user_form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin_form.resx">
+      <DependentUpon>Admin_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryBoy_admin_form.resx">
+      <DependentUpon>DeliveryBoy_admin_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Food_admin_form.resx">
+      <DependentUpon>Food_admin_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_admin.resx">
+      <DependentUpon>Login_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_form.resx">
+      <DependentUpon>Main_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_DeliveryBoy.resx">
+      <DependentUpon>Order_DeliveryBoy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="user_form.resx">
+      <DependentUpon>user_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USERNAME.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSWORD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dinner-egg-flatlay-54455.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NAME.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PHONE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADDRESS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AREA CODE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I AM ADMIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\art-color-food-139259.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BACK1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FOOD NAME.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NUMBER OF ITEMS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PRICE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QUANTITY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cakes-chocolate-close-up-959079.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DISCOUNT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITEMS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NAME1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PRICE1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appetizer-background-cuisine-326281.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AREA CODE1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ID1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NAME2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PHONE1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADDRESS1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AREA CODE2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BACK2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NAME3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PHONE2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TOTAL COST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 251.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
